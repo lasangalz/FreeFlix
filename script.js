@@ -1,15 +1,24 @@
-const player = document.getElementById("videoPlayer");
+const frame = document.getElementById("movieFrame");
+const playerContainer = document.getElementById("playerContainer");
 const cards = document.querySelectorAll(".video-card");
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
-        player.style.display = "block";
-        player.src = card.dataset.video;
-        player.load();
-        player.play();
+        const embed = card.dataset.embed;
+
+        if (!embed) {
+            alert("This movie doesn't have an embed link yet.");
+            return;
+        }
+
+        frame.src = embed;
+        playerContainer.style.display = "block";
+
+        playerContainer.scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });
-
 
 const searchBar = document.getElementById("searchBar");
 
