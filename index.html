@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +10,21 @@
 <body>
 
 <h1>FreeFlix</h1>
+
 <input type="text" id="searchBar" placeholder="Search movies...">
+
 <div class="movies">
 
-    <div class="video-card" data-video="Videos/Heat.1995.1080p.BRrip.x264.YIFY.mp4">
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0113277">
         <img src="posters/heat.jpg" class="poster" alt="Heat Poster">
 
         <div class="video-info">
             <h2>Heat (1995)</h2>
             <p>Crime • Drama</p>
-            <iframe src="https://www.2embed.cc/embed/tt0113277" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
         </div>
     </div>
 
-
-    <div class="video-card" data-video="Videos/Copy of Scarface.1983.1080p.BRrip.x264.YIFY.mp4">
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0086250">
         <img src="posters/scarface.jpg" class="poster" alt="Scarface Poster">
 
         <div class="video-info">
@@ -34,8 +33,7 @@
         </div>
     </div>
 
-
-    <div class="video-card" data-video="Videos/Eyes.Wide.Shut.1999.1080p.BluRay.x264.YIFY.mp4">
+    <div class="video-card" data-embed="">
         <img src="posters/eyeswideshut.jpg" class="poster" alt="Eyes Wide Shut Poster">
 
         <div class="video-info">
@@ -44,8 +42,7 @@
         </div>
     </div>
 
-
-    <div class="video-card" data-video="Videos/Black.Phone.2.2025.1080p.WEBRip.x264.AAC5.1-[YTS.MX].mp4">
+    <div class="video-card" data-embed="">
         <img src="posters/blackphone2.jpg" class="poster" alt="Black Phone 2 Poster">
 
         <div class="video-info">
@@ -56,12 +53,18 @@
 
 </div>
 
-
-<video id="videoPlayer" width="900" controls style="display:none;"></video>
-
+<div id="playerContainer" style="display:none; margin-top:40px;">
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe
+            id="movieFrame"
+            src=""
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
