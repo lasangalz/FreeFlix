@@ -1,6 +1,8 @@
 const frame = document.getElementById("movieFrame");
 const playerContainer = document.getElementById("playerContainer");
+const spinner = document.getElementById("spinner");
 const cards = document.querySelectorAll(".video-card");
+const searchBar = document.getElementById("searchBar");
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -11,8 +13,16 @@ cards.forEach(card => {
             return;
         }
 
+        spinner.style.display = "block";
+        frame.style.display = "none";
+
         frame.src = embed;
         playerContainer.style.display = "block";
+
+        frame.onload = () => {
+            spinner.style.display = "none";
+            frame.style.display = "block";
+        };
 
         playerContainer.scrollIntoView({
             behavior: "smooth"
@@ -20,18 +30,12 @@ cards.forEach(card => {
     });
 });
 
-const searchBar = document.getElementById("searchBar");
-
 searchBar.addEventListener("input", () => {
     const search = searchBar.value.toLowerCase();
 
     cards.forEach(card => {
         const title = card.querySelector("h2").textContent.toLowerCase();
 
-        if (title.includes(search)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
+        card.style.display = title.includes(search) ? "block" : "none";
     });
 });
