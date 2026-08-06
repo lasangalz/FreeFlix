@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,21 +10,21 @@
 <body>
 
 <h1>FreeFlix</h1>
+
 <input type="text" id="searchBar" placeholder="Search movies...">
+
 <div class="movies">
 
-    <div class="video-card" data-video="Videos/Heat.1995.1080p.BRrip.x264.YIFY.mp4">
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0113277">
         <img src="posters/heat.jpg" class="poster" alt="Heat Poster">
 
         <div class="video-info">
             <h2>Heat (1995)</h2>
             <p>Crime • Drama</p>
-            <iframe src="https://www.2embed.cc/embed/tt0113277" width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen="true"></iframe>
         </div>
     </div>
 
-
-    <div class="video-card" data-video="Videos/Copy of Scarface.1983.1080p.BRrip.x264.YIFY.mp4">
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0086250">
         <img src="posters/scarface.jpg" class="poster" alt="Scarface Poster">
 
         <div class="video-info">
@@ -34,18 +33,16 @@
         </div>
     </div>
 
+   <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0120663">
+    <img src="posters/eyeswideshut.jpg" class="poster" alt="Eyes Wide Shut Poster">
 
-    <div class="video-card" data-video="Videos/Eyes.Wide.Shut.1999.1080p.BluRay.x264.YIFY.mp4">
-        <img src="posters/eyeswideshut.jpg" class="poster" alt="Eyes Wide Shut Poster">
-
-        <div class="video-info">
-            <h2>Eyes Wide Shut (1999)</h2>
-            <p>Drama • Mystery</p>
-        </div>
+    <div class="video-info">
+        <h2>Eyes Wide Shut (1999)</h2>
+        <p>Drama • Mystery</p>
     </div>
+</div>
 
-
-    <div class="video-card" data-video="Videos/Black.Phone.2.2025.1080p.WEBRip.x264.AAC5.1-[YTS.MX].mp4">
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt29644189">
         <img src="posters/blackphone2.jpg" class="poster" alt="Black Phone 2 Poster">
 
         <div class="video-info">
@@ -54,14 +51,95 @@
         </div>
     </div>
 
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt1922777">
+        <img src="posters/sinister.jpg" class="poster" alt="Sinister Poster">
+
+        <div class="video-info">
+            <h2>Sinister (2012)</h2>
+            <p>Horror • Mystery • Thriller</p>
+        </div>
+    </div>
+
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0112641">
+    <img src="posters/casino.jpg" class="poster" alt="Casino Poster">
+
+    <div class="video-info">
+        <h2>Casino (1995)</h2>
+        <p>Crime • Drama • 2h 58m</p>
+    </div>
+</div>
+
+<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0068646">
+    <img src="posters/godfather.jpg" class="poster" alt="The Godfather Poster">
+
+    <div class="video-info">
+        <h2>The Godfather (1972)</h2>
+        <p>Crime • Drama • 2h 55m</p>
+    </div>
+</div>
+
+<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0081505">
+    <img src="posters/theshining.jpg" class="poster" alt="The Shining Poster">
+
+    <div class="video-info">
+        <h2>The Shining (1980)</h2>
+        <p>Horror • Drama • 2h 26m</p>
+    </div>
 </div>
 
 
-<video id="videoPlayer" width="900" controls style="display:none;"></video>
+<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0110912">
+    <img src="posters/pulpfiction.jpg" class="poster" alt="Pulp Fiction Poster">
 
+    <div class="video-info">
+        <h2>Pulp Fiction (1994)</h2>
+        <p>Crime • Drama • 2h 34m</p>
+    </div>
+</div>
+
+<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0114814">
+    <img src="posters/usualsuspects.jpg" class="poster" alt="The Usual Suspects Poster">
+
+    <div class="video-info">
+        <h2>The Usual Suspects (1995)</h2>
+        <p>Crime • Mystery • Thriller • 1h 46m</p>
+    </div>
+</div>
+
+<div class="video-card" data-embed="https://www.2embedstream.xyz/embed/movie/tt0105236">
+    <img src="posters/reservoirdogs.jpg" class="poster" alt="Reservoir Dogs Poster">
+
+    <div class="video-info">
+        <h2>Reservoir Dogs (1992)</h2>
+        <p>Crime • Thriller</p>
+    </div>
+</div>
+
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0099685">
+        <img src="posters/goodfellas.jpg" class="poster" alt="Goodfellas Poster">
+
+        <div class="video-info">
+            <h2>Goodfellas (1990)</h2>
+            <p>Crime • Drama • 2h 25m</p>
+        </div>
+    </div>
+
+</div>
+
+<div id="playerContainer" style="display:none; margin-top:40px;">
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe
+            id="movieFrame"
+            src=""
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+            allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+<div id="spinner" class="spinner"></div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
