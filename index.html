@@ -185,7 +185,7 @@
     </div>
 </div>
     
-    <div class="video-card" onclick="openEpisodes()">
+    <div class="video-card" onclick="openTedLassoEpisodes()">
     <img src="posters/ted-lasso.jpg" class="poster" alt="Ted Lasso Season 1 Poster">
 
     <div class="video-info">
@@ -194,33 +194,28 @@
     </div>
 </div>
 
-<div id="episodeList" style="display:none;">
+<div id="tedLassoEpisodes" style="display:none;">
     <h2>Ted Lasso — Season 1</h2>
 
-    <button onclick="playEpisode(1)">Episode 1</button>
-    <button onclick="playEpisode(2)">Episode 2</button>
-    <button onclick="playEpisode(3)">Episode 3</button>
-    <button onclick="playEpisode(4)">Episode 4</button>
-    <button onclick="playEpisode(5)">Episode 5</button>
-    <button onclick="playEpisode(6)">Episode 6</button>
-    <button onclick="playEpisode(7)">Episode 7</button>
-    <button onclick="playEpisode(8)">Episode 8</button>
-    <button onclick="playEpisode(9)">Episode 9</button>
-    <button onclick="playEpisode(10)">Episode 10</button>
-    <button onclick="playEpisode(11)">Episode 11</button>
-    <button onclick="playEpisode(12)">Episode 12</button>
+    <button onclick="selectTedEpisode(1)">Episode 1</button>
+    <button onclick="selectTedEpisode(2)">Episode 2</button>
+    <button onclick="selectTedEpisode(3)">Episode 3</button>
+    <button onclick="selectTedEpisode(4)">Episode 4</button>
+    <button onclick="selectTedEpisode(5)">Episode 5</button>
+    <button onclick="selectTedEpisode(6)">Episode 6</button>
+    <button onclick="selectTedEpisode(7)">Episode 7</button>
+    <button onclick="selectTedEpisode(8)">Episode 8</button>
+    <button onclick="selectTedEpisode(9)">Episode 9</button>
+    <button onclick="selectTedEpisode(10)">Episode 10</button>
 </div>
 
 <script>
-function openEpisodes() {
-    document.getElementById("episodeList").style.display = "block";
+function openTedLassoEpisodes() {
+    document.getElementById("tedLassoEpisodes").style.display = "block";
 }
 
-function playEpisode(episode) {
-    const url = `https://videm.xyz/embed/tv/tt10986410/1/${episode}`;
-
-    // Change this to whatever iframe/player ID your site currently uses
-    document.getElementById("movieFrame").src = url;
+function selectTedEpisode(episode) {
+    alert("Selected Ted Lasso — Season 1, Episode " + episode);
 }
 </script>
 
