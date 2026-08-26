@@ -1,44 +1,126 @@
+```javascript
 const frame = document.getElementById("movieFrame");
 const playerContainer = document.getElementById("playerContainer");
 const spinner = document.getElementById("spinner");
-const cards = document.querySelectorAll(".video-card");
 const searchBar = document.getElementById("searchBar");
 const nowPlaying = document.getElementById("nowPlaying");
 
-// Normal movies
-cards.forEach(card => {
-    card.addEventListener("click", () => {
+const cards = document.querySelectorAll(".video-card");
 
-        // Don't handle Ted Lasso as a normal movie
-        if (card.dataset.show === "ted-lasso") {
-            openTedLassoEpisodes();
-            return;
-        }
+const tedLassoCard = document.getElementById("tedLassoCard");
+const tedLassoEpisodes = document.getElementById("tedLassoEpisodes");
+
+
+// -----------------------------
+// NORMAL MOVIE CARDS
+// -----------------------------
+
+cards.forEach(card => {
+
+    if (card.id === "tedLassoCard") {
+        return;
+    }
+
+    card.addEventListener("click", () => {
 
         const embed = card.dataset.embed;
 
-        if (!embed) {
-            alert("This movie doesn't have an embed link yet.");
+        if (!embed || embed.startsWith("YOUR_")) {
+            alert("Add an authorized video URL to this movie first.");
             return;
         }
 
-        playVideo(embed, card.querySelector("h2").textContent);
+        const title = card.querySelector("h2").textContent;
+
+        playVideo(embed, title);
     });
 });
 
+
+// -----------------------------
+// TED LASSO CARD
+// -----------------------------
+
+tedLassoCard.addEventListener("click", () => {
+
+    tedLassoEpisodes.classList.toggle("show");
+
+    if (tedLassoEpisodes.classList.contains("show")) {
+        tedLassoEpisodes.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+});
+
+
+// -----------------------------
+// TED LASSO EPISODES
+// -----------------------------
+
+const episodeButtons =
+    document.querySelectorAll("#tedLassoEpisodes button");
+
+episodeButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const episode = button.dataset.episode;
+
+        /*
+            Add your authorized episode URLs here.
+        */
+
+        const episodeUrls = {
+            1: "",
+            2: "",
+            3: "",
+            4: "",
+            5: "",
+            6: "",
+            7: "",
+            8: "",
+            9: "",
+            10: ""
+        };
+
+        const url = episodeUrls[episode];
+
+        if (!url) {
+            alert(
+                "No authorized URL has been added for Episode " +
+                episode
+            );
+            return;
+        }
+
+        playVideo(
+            url,
+            "Ted Lasso — Season 1, Episode " + episode
+        );
+    });
+});
+
+
+// -----------------------------
+// PLAYER
+// -----------------------------
+
 function playVideo(url, title) {
+
     spinner.style.display = "block";
+
     frame.style.display = "none";
 
+    nowPlaying.textContent = title;
+
     frame.src = url;
+
     playerContainer.style.display = "block";
 
-    if (nowPlaying) {
-        nowPlaying.textContent = title;
-    }
-
     frame.onload = () => {
+
         spinner.style.display = "none";
+
         frame.style.display = "block";
     };
 
@@ -47,35 +129,28 @@ function playVideo(url, title) {
     });
 }
 
-// Ted Lasso episode menu
-function openTedLassoEpisodes() {
-    const episodes = document.getElementById("tedLassoEpisodes");
 
-    episodes.style.display =
-        episodes.style.display === "block" ? "none" : "block";
-}
+// -----------------------------
+// SEARCH
+// -----------------------------
 
-// Episode selection
-function playTedLassoEpisode(episode) {
-
-    const url =
-        "https://videm.xyz/embed/tv/tt10986410/1/" + episode;
-
-    playVideo(
-        url,
-        "Ted Lasso — Season 1, Episode " + episode
-    );
-}
-
-// Search
 searchBar.addEventListener("input", () => {
-    const search = searchBar.value.toLowerCase();
+
+    const search =
+        searchBar.value.toLowerCase().trim();
 
     cards.forEach(card => {
+
         const title =
-            card.querySelector("h2").textContent.toLowerCase();
+            card.querySelector("h2")
+                .textContent
+                .toLowerCase();
 
         card.style.display =
-            title.includes(search) ? "block" : "none";
+            title.includes(search)
+                ? ""
+                : "none";
     });
 });
+```
+
