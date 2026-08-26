@@ -184,9 +184,44 @@
         <p>Drama • Thriller</p>
     </div>
 
-    <iframe src="https://videm.xyz/embed/tv/tt10986410/1/1"
-        width="100%" height="100%"
-        frameborder="0" allowfullscreen></iframe>
+    <div class="video-card" onclick="openEpisodes()">
+    <img src="posters/ted-lasso.jpg" class="poster" alt="Ted Lasso Season 1 Poster">
+
+    <div class="video-info">
+        <h2>Ted Lasso (Season 1)</h2>
+        <p>Comedy • Drama • Sport</p>
+    </div>
+</div>
+
+<div id="episodeList" style="display:none;">
+    <h2>Ted Lasso — Season 1</h2>
+
+    <button onclick="playEpisode(1)">Episode 1</button>
+    <button onclick="playEpisode(2)">Episode 2</button>
+    <button onclick="playEpisode(3)">Episode 3</button>
+    <button onclick="playEpisode(4)">Episode 4</button>
+    <button onclick="playEpisode(5)">Episode 5</button>
+    <button onclick="playEpisode(6)">Episode 6</button>
+    <button onclick="playEpisode(7)">Episode 7</button>
+    <button onclick="playEpisode(8)">Episode 8</button>
+    <button onclick="playEpisode(9)">Episode 9</button>
+    <button onclick="playEpisode(10)">Episode 10</button>
+    <button onclick="playEpisode(11)">Episode 11</button>
+    <button onclick="playEpisode(12)">Episode 12</button>
+</div>
+
+<script>
+function openEpisodes() {
+    document.getElementById("episodeList").style.display = "block";
+}
+
+function playEpisode(episode) {
+    const url = `https://videm.xyz/embed/tv/tt10986410/1/${episode}`;
+
+    // Change this to whatever iframe/player ID your site currently uses
+    document.getElementById("movieFrame").src = url;
+}
+</script>
 
 </div>
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0099685">
