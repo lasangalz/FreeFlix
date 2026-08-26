@@ -1,10 +1,51 @@
-<!DOCTYPE html\
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreeFlix</title>
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #playerContainer {
+            display: none;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        #nowPlaying {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .player-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+
+        #movieFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        #tedLassoEpisodes {
+            display: none;
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        #tedLassoEpisodes button {
+            margin: 5px;
+            padding: 10px 18px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,97 +58,86 @@
 
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0113277">
         <img src="posters/heat.jpg" class="poster" alt="Heat Poster">
-
         <div class="video-info">
             <h2>Heat (1995)</h2>
             <p>Crime • Drama</p>
         </div>
     </div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0071562">
-    <img src="posters/godfather2.jpg" class="poster" alt="The Godfather Part II Poster">
-
-    <div class="video-info">
-        <h2>The Godfather Part II (1974)</h2>
-        <p>Crime • Drama</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0071562">
+        <img src="posters/godfather2.jpg" class="poster" alt="The Godfather Part II Poster">
+        <div class="video-info">
+            <h2>The Godfather Part II (1974)</h2>
+            <p>Crime • Drama</p>
+        </div>
     </div>
-</div>
 
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0114369">
-    <img src="posters/se7en.jpg" class="poster" alt="Se7en Poster">
-
-    <div class="video-info">
-        <h2>Se7en (1995)</h2>
-        <p>Crime • Drama • Mystery</p>
+        <img src="posters/se7en.jpg" class="poster" alt="Se7en Poster">
+        <div class="video-info">
+            <h2>Se7en (1995)</h2>
+            <p>Crime • Drama • Mystery</p>
+        </div>
     </div>
-</div>
-    
+
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0086250">
         <img src="posters/scarface.jpg" class="poster" alt="Scarface Poster">
-
         <div class="video-info">
             <h2>Scarface (1983)</h2>
             <p>Crime • Drama</p>
         </div>
     </div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0075314">
-    <img src="posters/taxidriver.jpg" class="poster" alt="Taxi Driver Poster">
-
-    <div class="video-info">
-        <h2>Taxi Driver (1976)</h2>
-        <p>Crime • Drama</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0075314">
+        <img src="posters/taxidriver.jpg" class="poster" alt="Taxi Driver Poster">
+        <div class="video-info">
+            <h2>Taxi Driver (1976)</h2>
+            <p>Crime • Drama</p>
+        </div>
     </div>
-</div>
-    
+
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0378194">
-    <img src="posters/killbill2.jpg" class="poster" alt="Kill Bill Vol. 2 Poster">
-
-    <div class="video-info">
-        <h2>Kill Bill: Vol. 2 (2004)</h2>
-        <p>Action • Crime • Thriller</p>
+        <img src="posters/killbill2.jpg" class="poster" alt="Kill Bill Vol. 2 Poster">
+        <div class="video-info">
+            <h2>Kill Bill: Vol. 2 (2004)</h2>
+            <p>Action • Crime • Thriller</p>
+        </div>
     </div>
-</div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0099674">
-    <img src="posters/godfather3.jpg" class="poster" alt="The Godfather Part III Poster">
-
-    <div class="video-info">
-        <h2>The Godfather Part III (1990)</h2>
-        <p>Crime • Drama</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0099674">
+        <img src="posters/godfather3.jpg" class="poster" alt="The Godfather Part III Poster">
+        <div class="video-info">
+            <h2>The Godfather Part III (1990)</h2>
+            <p>Crime • Drama</p>
+        </div>
     </div>
-</div>
-    
+
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0443453">
-    <img src="posters/borat.jpg" class="poster" alt="Borat Poster">
-
-    <div class="video-info">
-        <h2>Borat (2006)</h2>
-        <p>Comedy</p>
+        <img src="posters/borat.jpg" class="poster" alt="Borat Poster">
+        <div class="video-info">
+            <h2>Borat (2006)</h2>
+            <p>Comedy</p>
+        </div>
     </div>
-</div>
 
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0266697">
-    <img src="posters/killbill1.jpg" class="poster" alt="Kill Bill Vol. 1 Poster">
-
-    <div class="video-info">
-        <h2>Kill Bill: Vol. 1 (2003)</h2>
-        <p>Action • Crime • Thriller</p>
+        <img src="posters/killbill1.jpg" class="poster" alt="Kill Bill Vol. 1 Poster">
+        <div class="video-info">
+            <h2>Kill Bill: Vol. 1 (2003)</h2>
+            <p>Action • Crime • Thriller</p>
+        </div>
     </div>
-</div>
 
-   <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0120663">
-    <img src="posters/eyeswideshut.jpg" class="poster" alt="Eyes Wide Shut Poster">
-
-    <div class="video-info">
-        <h2>Eyes Wide Shut (1999)</h2>
-        <p>Drama • Mystery</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0120663">
+        <img src="posters/eyeswideshut.jpg" class="poster" alt="Eyes Wide Shut Poster">
+        <div class="video-info">
+            <h2>Eyes Wide Shut (1999)</h2>
+            <p>Drama • Mystery</p>
+        </div>
     </div>
-</div>
 
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt29644189">
         <img src="posters/blackphone2.jpg" class="poster" alt="Black Phone 2 Poster">
-
         <div class="video-info">
             <h2>Black Phone 2 (2025)</h2>
             <p>Horror • Thriller</p>
@@ -116,7 +146,6 @@
 
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt1922777">
         <img src="posters/sinister.jpg" class="poster" alt="Sinister Poster">
-
         <div class="video-info">
             <h2>Sinister (2012)</h2>
             <p>Horror • Mystery • Thriller</p>
@@ -124,131 +153,221 @@
     </div>
 
     <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0112641">
-    <img src="posters/casino.jpg" class="poster" alt="Casino Poster">
-
-    <div class="video-info">
-        <h2>Casino (1995)</h2>
-        <p>Crime • Drama • 2h 58m</p>
+        <img src="posters/casino.jpg" class="poster" alt="Casino Poster">
+        <div class="video-info">
+            <h2>Casino (1995)</h2>
+            <p>Crime • Drama • 2h 58m</p>
+        </div>
     </div>
-</div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0068646">
-    <img src="posters/godfather.jpg" class="poster" alt="The Godfather Poster">
-
-    <div class="video-info">
-        <h2>The Godfather (1972)</h2>
-        <p>Crime • Drama • 2h 55m</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0068646">
+        <img src="posters/godfather.jpg" class="poster" alt="The Godfather Poster">
+        <div class="video-info">
+            <h2>The Godfather (1972)</h2>
+            <p>Crime • Drama • 2h 55m</p>
+        </div>
     </div>
-</div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0081505">
-    <img src="posters/theshining.jpg" class="poster" alt="The Shining Poster">
-
-    <div class="video-info">
-        <h2>The Shining (1980)</h2>
-        <p>Horror • Drama • 2h 26m</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0081505">
+        <img src="posters/theshining.jpg" class="poster" alt="The Shining Poster">
+        <div class="video-info">
+            <h2>The Shining (1980)</h2>
+            <p>Horror • Drama • 2h 26m</p>
+        </div>
     </div>
-</div>
 
-
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0110912">
-    <img src="posters/pulpfiction.jpg" class="poster" alt="Pulp Fiction Poster">
-
-    <div class="video-info">
-        <h2>Pulp Fiction (1994)</h2>
-        <p>Crime • Drama • 2h 34m</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0110912">
+        <img src="posters/pulpfiction.jpg" class="poster" alt="Pulp Fiction Poster">
+        <div class="video-info">
+            <h2>Pulp Fiction (1994)</h2>
+            <p>Crime • Drama • 2h 34m</p>
+        </div>
     </div>
-</div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0114814">
-    <img src="posters/usualsuspects.jpg" class="poster" alt="The Usual Suspects Poster">
-
-    <div class="video-info">
-        <h2>The Usual Suspects (1995)</h2>
-        <p>Crime • Mystery • Thriller • 1h 46m</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0114814">
+        <img src="posters/usualsuspects.jpg" class="poster" alt="The Usual Suspects Poster">
+        <div class="video-info">
+            <h2>The Usual Suspects (1995)</h2>
+            <p>Crime • Mystery • Thriller • 1h 46m</p>
+        </div>
     </div>
-</div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0105236">
-    <img src="posters/reservoirdogs.jpg" class="poster" alt="Reservoir Dogs Poster">
-    <div class="video-info">
-        <h2>Reservoir Dogs (1992)</h2>
-        <p>Crime • Thriller</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0105236">
+        <img src="posters/reservoirdogs.jpg" class="poster" alt="Reservoir Dogs Poster">
+        <div class="video-info">
+            <h2>Reservoir Dogs (1992)</h2>
+            <p>Crime • Thriller</p>
+        </div>
     </div>
-</div>
 
-<div class="video-card" data-embed="https://www.2embed.cc/embed/tt0137523">
-    <img src="posters/fightclub.jpg" class="poster" alt="Fight Club Poster">
-    <div class="video-info">
-        <h2>Fight Club (1999)</h2>
-        <p>Drama • Thriller</p>
+    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0137523">
+        <img src="posters/fightclub.jpg" class="poster" alt="Fight Club Poster">
+        <div class="video-info">
+            <h2>Fight Club (1999)</h2>
+            <p>Drama • Thriller</p>
+        </div>
     </div>
-</div>
-    
-    <div class="video-card" onclick="openTedLassoEpisodes()">
-    <img src="posters/ted-lasso.jpg" class="poster" alt="Ted Lasso Season 1 Poster">
 
-    <div class="video-info">
-        <h2>Ted Lasso (Season 1)</h2>
-        <p>Comedy • Drama • Sport</p>
-    </div>
-</div>
-
-    <iframe src="https://videm.xyz/embed/tv/tt10986410/1/1"
-        width="100%" height="100%"
-        frameborder="0" allowfullscreen></iframe>
-
-<div id="tedLassoEpisodes" style="display:none;">
-    <h2>Ted Lasso — Season 1</h2>
-
-    <button onclick="selectTedEpisode(1)">Episode 1</button>
-    <button onclick="selectTedEpisode(2)">Episode 2</button>
-    <button onclick="selectTedEpisode(3)">Episode 3</button>
-    <button onclick="selectTedEpisode(4)">Episode 4</button>
-    <button onclick="selectTedEpisode(5)">Episode 5</button>
-    <button onclick="selectTedEpisode(6)">Episode 6</button>
-    <button onclick="selectTedEpisode(7)">Episode 7</button>
-    <button onclick="selectTedEpisode(8)">Episode 8</button>
-    <button onclick="selectTedEpisode(9)">Episode 9</button>
-    <button onclick="selectTedEpisode(10)">Episode 10</button>
-</div>
-
-<script>
-function openTedLassoEpisodes() {
-    document.getElementById("tedLassoEpisodes").style.display = "block";
-}
-
-function selectTedEpisode(episode) {
-    alert("Selected Ted Lasso — Season 1, Episode " + episode);
-}
-</script>
-
-</div>
-    <div class="video-card" data-embed="https://www.2embed.cc/embed/tt0099685">
-        <img src="posters/goodfellas.jpg" class="poster" alt="Goodfellas Poster">
+    <!-- Ted Lasso -->
+    <div class="video-card" id="tedLassoCard" onclick="openTedLassoEpisodes()">
+        <img src="posters/ted-lasso.jpg" class="poster" alt="Ted Lasso Season 1 Poster">
 
         <div class="video-info">
-            <h2>Goodfellas (1990)</h2>
-            <p>Crime • Drama • 2h 25m</p>
+            <h2>Ted Lasso (Season 1)</h2>
+            <p>Comedy • Drama • Sport</p>
         </div>
     </div>
 
 </div>
 
-<div id="playerContainer" style="display:none; margin-top:40px;">
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+<!-- Episode selector -->
+<div id="tedLassoEpisodes">
+    <h2>Ted Lasso — Season 1</h2>
+
+    <button onclick="selectEpisode(1)">Episode 1</button>
+    <button onclick="selectEpisode(2)">Episode 2</button>
+    <button onclick="selectEpisode(3)">Episode 3</button>
+    <button onclick="selectEpisode(4)">Episode 4</button>
+    <button onclick="selectEpisode(5)">Episode 5</button>
+    <button onclick="selectEpisode(6)">Episode 6</button>
+    <button onclick="selectEpisode(7)">Episode 7</button>
+    <button onclick="selectEpisode(8)">Episode 8</button>
+    <button onclick="selectEpisode(9)">Episode 9</button>
+    <button onclick="selectEpisode(10)">Episode 10</button>
+</div>
+
+<!-- Player -->
+<div id="playerContainer">
+
+    <h2 id="nowPlaying"></h2>
+
+    <div class="player-wrapper">
         <iframe
             id="movieFrame"
             src=""
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
             allowfullscreen>
         </iframe>
     </div>
+
 </div>
 
 <div id="spinner" class="spinner"></div>
 
-<script src="script.js"></script>
+<script>
+
+const frame = document.getElementById("movieFrame");
+const playerContainer = document.getElementById("playerContainer");
+const spinner = document.getElementById("spinner");
+const cards = document.querySelectorAll(".video-card");
+const searchBar = document.getElementById("searchBar");
+const nowPlaying = document.getElementById("nowPlaying");
+
+cards.forEach(card => {
+
+    if (card.id === "tedLassoCard") return;
+
+    card.addEventListener("click", () => {
+
+        const embed = card.dataset.embed;
+
+        if (!embed) {
+            alert("This movie doesn't have an embed link yet.");
+            return;
+        }
+
+        playVideo(embed, card.querySelector("h2").textContent);
+    });
+
+});
+
+function playVideo(url, title) {
+
+    spinner.style.display = "block";
+    frame.style.display = "none";
+
+    frame.src = url;
+
+    playerContainer.style.display = "block";
+
+    nowPlaying.textContent = title;
+
+    frame.onload = () => {
+        spinner.style.display = "none";
+        frame.style.display = "block";
+    };
+
+    playerContainer.scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function openTedLassoEpisodes() {
+
+    const list = document.getElementById("tedLassoEpisodes");
+
+    list.style.display =
+        list.style.display === "block"
+            ? "none"
+            : "block";
+
+}
+
+function selectEpisode(episode) {
+
+    /*
+       Put your authorized Ted Lasso episode URL here.
+       Example:
+
+       const urls = {
+           1: "YOUR_EPISODE_1_URL",
+           2: "YOUR_EPISODE_2_URL",
+           ...
+       };
+    */
+
+    const urls = {
+        1: "",
+        2: "",
+        3: "",
+        4: "",
+        5: "",
+        6: "",
+        7: "",
+        8: "",
+        9: "",
+        10: ""
+    };
+
+    if (!urls[episode]) {
+        alert("Add the authorized URL for Episode " + episode + " first.");
+        return;
+    }
+
+    playVideo(
+        urls[episode],
+        "Ted Lasso — Season 1, Episode " + episode
+    );
+}
+
+searchBar.addEventListener("input", () => {
+
+    const search = searchBar.value.toLowerCase();
+
+    cards.forEach(card => {
+
+        const title =
+            card.querySelector("h2").textContent.toLowerCase();
+
+        card.style.display =
+            title.includes(search) ? "block" : "none";
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
+```
+
